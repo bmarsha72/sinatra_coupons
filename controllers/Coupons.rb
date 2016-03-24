@@ -5,6 +5,8 @@ get '/' do
   erb :newcoupon
 end
 
+
+
 #/coupons/newcoupon
 post '/newcoupon' do
   @newcoupon = Coupon.create({
@@ -16,6 +18,11 @@ post '/newcoupon' do
     })
   @newcoupon.save
   redirect '/'
+end
+
+get '/list' do
+  @newcoupon = Coupon.all
+  erb :list
 end
 
 end

@@ -1,7 +1,23 @@
-<% @coupon.each do |item|%>
+<div class="container-fluid">
+  <div class="row">
 
-<li>
-  <%=item.title%> is a coupon <%=item.descripton%> and it is good
-</li>
+
+    <div class="col-xs-6">
+    </div>
+
+    <div class="col-xs-6">
+      <% @newcoupon.each do |item|%>
+      <li>
+        <%=item.title%> coupon <%=item.description%>
+      </li>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
 
 <%end%>
